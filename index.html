@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه اینترنتی</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="background-overlay" onclick="closeModal()"></div>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#"
+              ><img src="assets/images/svg/full-horizontal.svg" alt=""
+            /></a>
+          </div>
+
+          <div class="searchBar" onclick="openModal('search')">
+            <div id="search-modal">
+              <input type="text" placeholder="جستجو" />
+            </div>
+            <img src="assets/images/svg/search.svg" />
+            <p>جستجو</p>
+          </div>
+
+          <div class="loginButton">
+            <a href="#">
+              <button><i class="fa fa-sign-in"></i> ورود | ثبت نام</button>
+            </a>
+            <a href="#" id="cart"
+              ><img src="assets/images/svg/shopping-cart.svg"
+            /></a>
+          </div>
+          <div class="category">
+            <ul>
+              <div id="category-dropdown"></div>
+
+              <li onclick="openModal('cat')">
+                <a href="#"
+                  ><i class="fa fa-bars"></i> دسته&#8239;بندی کالاها
+                </a>
+              </li>
+              <li><a href="#">شگفت&#8239;انگیزها</a></li>
+              <li><a href="#">سوپرمارکت</a></li>
+              <li><a href="#">کارت هدیه</a></li>
+              <li><a href="#">پرفروش&#8239;ترین ها</a></li>
+              <li><a href="#">تخفیف&#8239;ها و پیشنهادها</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="headBanner">
+      <div class="slideButtons">
+        <div class="buttonSlide" onclick="goNextSlide()">
+          <img src="assets/images/svg/next.svg" />
+        </div>
+        <div class="buttonSlide" onclick="goPrevSlide()">
+          <img src="assets/images/svg/prev.svg" />
+        </div>
+      </div>
+
+      <img class="slideshow-img" src="assets/images/ads/headBanner/test2.gif" />
+      <img class="slideshow-img" src="assets/images/ads/headBanner/test1.gif" />
+      <img
+        class="slideshow-img"
+        src="assets/images/ads/headBanner/test3.webp"
+      />
+      <img
+        class="slideshow-img"
+        src="assets/images/ads/headBanner/test4.webp"
+      />
+      <img
+        class="slideshow-img"
+        src="assets/images/ads/headBanner/test5.webp"
+      />
+    </div>
+
+    <div class="container">
+      <div class="productOffer">
+        <div id="logo">
+          <img src="assets/images/svg/Amazings.svg" />
+          <a href="#">پیشنهادها</a>
+        </div>
+        <div class="buttonSlide" onclick="onScrollSlide()">
+          <img src="assets/images/svg/next.svg" />
+        </div>
+        <div class="buttonSlide left" onclick="onScrollSlide('left')">
+          <img src="assets/images/svg/prev.svg" />
+        </div>
+        <div class="product-items" id="productitems">
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/products/29100f8f00988dde496195bf16491ad940534cb6_1697956124.webp"
+              alt=""
+              draggable="false"
+            />
+            <p>هندزفری بلوتوثی پرووان</p>
+            <span>42%</span>
+            <h3>1500000تومان</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offers">
+      <a href="#" class="offer-card"
+        ><img src="assets/images/img/offer1.webp" alt="offer1"
+      /></a>
+
+      <a href="#" class="offer-card"
+        ><img src="assets/images/img/offer2.webp" alt="offer2"
+      /></a>
+
+      <a href="#" class="offer-card"
+        ><img src="assets/images/img/offer3.webp" alt="offer3"
+      /></a>
+
+      <a href="#" class="offer-card"
+        ><img src="assets/images/img/offer4.webp" alt="offer4"
+      /></a>
+    </div>
+
+    <div class="main-category">
+      <h2>خرید بر اساس دسته بندی</h2>
+
+      <div
+        id="main_category_element"
+        class="category"
+        onmousedown="mouseDownHandler(event)"
+      >
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/book.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/car.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/cleaning.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/digital.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/fashion.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/food.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/giftcards.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/gold.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/health.jpg" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/home.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/local.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/makeup.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/phone.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/tools.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/toys.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+
+        <div class="category-item">
+          <a href="#"
+            ><img src="assets/images/img/category/travel.ong.png" alt="book" />
+            <p>کتاب، لوازم تحریر و هنر</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="suggested_products">
+        <div class="suggested_card">
+          <div class="suggested_card_title">
+            <h2>لپ تاپ و الترابوک</h2>
+            <p>براساس سلیقه شما</p>
+          </div>
+          <div class="suggested_card_items">
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop1.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop2.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop3.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop4.jpg" alt="" />
+            </a>
+          </div>
+          <a id="show" href="#">مشاهده &gt;</a>
+        </div>
+
+        <div class="suggested_card">
+          <div class="suggested_card_title">
+            <h2>لپ تاپ و الترابوک</h2>
+            <p>براساس سلیقه شما</p>
+          </div>
+          <div class="suggested_card_items">
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop1.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop2.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop3.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop4.jpg" alt="" />
+            </a>
+          </div>
+          <a id="show" href="#">مشاهده &gt;</a>
+        </div>
+
+        <div class="suggested_card">
+          <div class="suggested_card_title">
+            <h2>لپ تاپ و الترابوک</h2>
+            <p>براساس سلیقه شما</p>
+          </div>
+          <div class="suggested_card_items">
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop1.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop2.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop3.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop4.jpg" alt="" />
+            </a>
+          </div>
+          <a id="show" href="#">مشاهده &gt;</a>
+        </div>
+
+        <div class="suggested_card">
+          <div class="suggested_card_title">
+            <h2>لپ تاپ و الترابوک</h2>
+            <p>براساس سلیقه شما</p>
+          </div>
+          <div class="suggested_card_items">
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop1.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop2.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop3.jpg" alt="" />
+            </a>
+
+            <a href="#">
+              <img src="assets/images/products/suggested/laptop4.jpg" alt="" />
+            </a>
+          </div>
+          <a id="show" href="#">مشاهده &gt;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-sellers">
+      <span>
+        <h2>پرفروش ترین کالاها</h2>
+        <a href="#">مشاهده همه</a>
+      </span>
+      <div class="best-sellers-list" onmousedown="mouseDownHandler(event)">
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>1</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>2</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>3</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>4</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>5</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>6</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>7</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>8</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>9</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>10</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>11</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+
+        <div class="best-sellers-item">
+          <a href="#">
+            <img
+              src="assets/images/products/554d99facee3fc7608d8e904beb2576117517155_1625834766.webp"
+              alt="book"
+            />
+            <h2>12</h2>
+            <p>دفتر مشق مدل ایفل بسته 5 عددی</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/scrollCategory.js"></script>
+  </body>
+</html>

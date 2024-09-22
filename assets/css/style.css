@@ -1,0 +1,629 @@
+@font-face {
+  font-family: "shabnam";
+  src: url("../fonts/Shabnam.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#background-overlay {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 94px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  -webkit-user-drag: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+body {
+  direction: rtl;
+  font-family: "shabnam";
+}
+
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: rgba(36, 36, 66, 0.3) 0 2px 0 -1px;
+  background-color: #fff;
+  z-index: 2;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+header nav .logo {
+  width: 200px;
+  float: right;
+}
+header nav .logo img {
+  width: 200px;
+}
+header nav .searchBar {
+  background-color: rgb(243, 243, 243);
+  margin-right: 15px;
+  border-radius: 8px;
+  height: 35px;
+  width: 500px;
+  float: right;
+  padding: 2px 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+header nav .searchBar img {
+  height: 22px;
+  margin-top: 5px;
+  float: right;
+}
+header nav .searchBar p {
+  color: rgb(118, 119, 121);
+  float: right;
+  margin-top: 8px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+header nav .searchBar #search-modal {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  box-shadow: rgba(92, 92, 92, 0.16) 0px 1px 4px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(134, 134, 134, 0.16);
+  padding: 5px 10px;
+}
+header nav .searchBar #search-modal input {
+  color: rgb(118, 119, 121);
+  font-family: "shabnam";
+  display: block;
+  width: 98%;
+  padding: 0 10px;
+  height: 40px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(72, 177, 219);
+}
+header nav .searchBar:hover {
+  cursor: text;
+}
+header nav .loginButton {
+  width: 200px;
+  float: left;
+}
+header nav .loginButton button {
+  width: 130px;
+  height: 35px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid rgb(228, 228, 228);
+  font-size: 14px;
+}
+header nav .loginButton button:hover {
+  cursor: pointer;
+}
+header nav .loginButton a:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+header nav .loginButton #cart {
+  float: left;
+  border-right: 1px solid rgb(228, 228, 228);
+  width: 50px;
+  text-align: center;
+}
+header nav .loginButton #cart img {
+  margin-top: 5px;
+  width: 25px;
+}
+header nav #category-dropdown {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 94px;
+  width: 700px;
+  height: 400px;
+  box-shadow: rgba(92, 92, 92, 0.16) 0px 1px 4px;
+  background-color: white;
+  border: 1px solid rgba(134, 134, 134, 0.16);
+  padding: 5px 10px;
+}
+header nav .category {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  float: right;
+}
+header nav .category ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 11px;
+}
+header nav .category ul li {
+  position: relative;
+  padding: 12px;
+}
+header nav .category ul li a {
+  padding: 10px 5px;
+  color: rgb(118, 119, 121);
+}
+header nav .category ul li::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(226, 51, 78);
+  width: 0;
+  transition: width ease-out 0.15s;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+header nav .category ul li:hover::before {
+  width: 100%;
+}
+header nav .category ul li:first-child {
+  font-size: 12px;
+  padding-right: 0;
+}
+header nav .category ul li:first-child a {
+  color: black;
+}
+
+.headBanner {
+  max-width: 1920px;
+  height: 320px;
+  margin: 0 auto;
+  margin-top: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.headBanner .slideshow-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.headBanner .slideButtons {
+  display: flex;
+  z-index: 1;
+  visibility: hidden;
+  opacity: none;
+  position: absolute;
+  top: 80%;
+  right: 5%;
+  width: 90px;
+  height: 50px;
+  gap: 10px;
+  transition: visibility ease-out 0.1s, opacity 0.2s ease-in-out;
+}
+.headBanner .slideButtons .buttonSlide {
+  border-radius: 100%;
+  border: 1px solid rgb(177, 177, 177);
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+}
+.headBanner .slideButtons .buttonSlide img {
+  margin: 8px;
+  width: 15px;
+}
+.headBanner .slideButtons .buttonSlide:hover {
+  cursor: pointer;
+}
+
+.headBanner:hover .slideButtons {
+  visibility: visible;
+  opacity: 1;
+}
+
+.productOffer {
+  position: relative;
+  display: flex;
+  width: 98%;
+  height: 300px;
+  background-color: rgb(226, 51, 78);
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 15px 20px;
+  gap: 50px;
+}
+.productOffer #logo {
+  float: right;
+  height: 100%;
+  text-align: center;
+}
+.productOffer #logo a {
+  color: #fff;
+}
+.productOffer #logo a:hover {
+  color: rgb(212, 212, 212);
+}
+.productOffer #logo img {
+  width: 100px;
+  margin: 50px auto;
+  display: block;
+}
+.productOffer .buttonSlide {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  border-radius: 100%;
+  border: 1px solid rgb(158, 158, 158);
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  top: 50%;
+  right: 150px;
+  transition: visibility ease-out 0.1s, opacity 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.productOffer .buttonSlide img {
+  margin: 8px;
+  width: 15px;
+}
+.productOffer .buttonSlide:hover {
+  cursor: pointer;
+}
+.productOffer .left {
+  left: 10px;
+  right: inherit;
+}
+.productOffer .product-items::-webkit-scrollbar {
+  display: none;
+}
+.productOffer .product-items {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  overflow-x: scroll;
+  gap: 5px;
+}
+.productOffer .product-items :first-child {
+  border-radius: 0 10px 10px 0;
+}
+.productOffer .product-items :last-child {
+  border-radius: 10px 0 0 10px;
+}
+.productOffer .product-items .item {
+  flex-shrink: 0;
+  padding: 10px;
+  width: 160px;
+  height: 100%;
+  background-color: #fff;
+}
+.productOffer .product-items .item p {
+  margin-top: 10px;
+  color: rgb(118, 119, 121);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.productOffer .product-items .item h3 {
+  margin-top: 5px;
+  float: left;
+  color: rgb(88, 88, 88);
+  font-size: 13px;
+}
+.productOffer .product-items .item span {
+  background-color: rgb(226, 51, 78);
+  border-radius: 20px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #fff;
+}
+.productOffer .product-items .item img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.productOffer:hover .buttonSlide {
+  visibility: visible;
+  opacity: 1;
+}
+
+.offers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.offers .offer-card img {
+  border-radius: 20px;
+  height: auto;
+  width: 100%;
+  display: inline-block;
+}
+
+.main-category {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-category h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.main-category .category {
+  margin: 40px auto;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  justify-content: center;
+}
+.main-category .category .category-item {
+  margin-bottom: 5px;
+}
+.main-category .category .category-item a {
+  display: block;
+  width: 100px;
+}
+.main-category .category .category-item a p {
+  font-size: 14px;
+  text-align: center;
+}
+.main-category .category .category-item a img {
+  width: 100%;
+}
+
+.suggested_products {
+  width: 99%;
+  display: grid;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(221, 221, 221);
+  grid-auto-flow: column;
+}
+.suggested_products .suggested_card {
+  padding: 20px;
+  border-left: 1px solid rgb(235, 235, 235);
+}
+.suggested_products .suggested_card .suggested_card_title {
+  width: 100%;
+}
+.suggested_products .suggested_card .suggested_card_title h2 {
+  font-size: 16px;
+  color: rgb(48, 48, 48);
+  margin-bottom: 5px;
+}
+.suggested_products .suggested_card .suggested_card_title p {
+  color: rgb(139, 139, 139);
+  font-size: 12px;
+  width: 100%;
+}
+.suggested_products .suggested_card .suggested_card_items {
+  width: 100%;
+  grid-template-areas: "auto auto" "auto auto";
+  display: grid;
+}
+.suggested_products .suggested_card .suggested_card_items a {
+  padding: 10px;
+  display: block;
+}
+.suggested_products .suggested_card .suggested_card_items a img {
+  width: 100%;
+}
+.suggested_products .suggested_card .suggested_card_items a:hover img {
+  opacity: 80%;
+}
+.suggested_products .suggested_card #show {
+  color: rgb(38, 190, 183);
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+.suggested_products .suggested_card:last-of-type {
+  border: none;
+}
+
+.best-sellers {
+  width: 99%;
+  max-width: 1920px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 20px auto;
+}
+.best-sellers span h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.best-sellers span a {
+  color: rgb(38, 190, 183);
+  text-align: left;
+  margin-left: 20px;
+  display: block;
+}
+.best-sellers .best-sellers-list {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+}
+.best-sellers .best-sellers-list .best-sellers-item {
+  width: 280px;
+  margin-bottom: 50px;
+}
+.best-sellers .best-sellers-list .best-sellers-item a {
+  width: 100%;
+  height: 100%;
+}
+.best-sellers .best-sellers-list .best-sellers-item a h2 {
+  float: right;
+  color: rgb(38, 190, 183);
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.best-sellers .best-sellers-list .best-sellers-item a p {
+  color: rgb(118, 119, 121);
+  margin-top: 30px;
+  width: 150px;
+  font-size: 13px;
+  float: right;
+}
+.best-sellers .best-sellers-list .best-sellers-item a img {
+  width: 90px;
+  float: right;
+}
+
+@media screen and (max-width: 1200px) {
+  #background-overlay {
+    margin-top: 6px;
+  }
+  header nav {
+    padding: 0 20px;
+  }
+  header nav .logo {
+    display: none;
+  }
+  header nav .loginButton {
+    display: none;
+  }
+  header nav .category {
+    display: none;
+  }
+  header nav .searchBar {
+    width: 100%;
+    height: 35px;
+    margin: 20px auto;
+    border-radius: 25px;
+    padding: 2px 20px;
+  }
+  header nav .searchBar img {
+    height: 80%;
+  }
+  header nav .searchBar p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin-right: 12px;
+  }
+  .headBanner {
+    height: 300px;
+  }
+  .headBanner .slideshow-img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .headBanner .slideButtons {
+    z-index: 2;
+    top: 80%;
+  }
+  .productOffer {
+    display: block;
+    overflow: hidden;
+    width: 98%;
+    height: 290px;
+    margin: 20px auto;
+    padding: 5px 10px;
+  }
+  .productOffer #logo {
+    float: right;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+  }
+  .productOffer #logo a {
+    line-height: 2;
+  }
+  .productOffer #logo img {
+    display: none;
+  }
+  .productOffer .buttonSlide {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+  }
+  .productOffer .left {
+    left: 10px;
+    right: inherit;
+  }
+  .productOffer .product-items {
+    margin: 0 auto;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    gap: 5px;
+  }
+  .productOffer .product-items .item {
+    width: 150px;
+    height: 100%;
+  }
+  .productOffer .product-items .item img {
+    width: 100%;
+  }
+  .offers {
+    flex-wrap: wrap;
+  }
+  .offers .offer-card {
+    width: 48%;
+  }
+  .main-category h2 {
+    font-size: 16px;
+  }
+  .main-category .category {
+    padding: 10px 50px;
+    overflow-x: scroll;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: space-between;
+    scrollbar-width: none;
+  }
+  .main-category .category .category-item a {
+    width: 70px;
+  }
+  .main-category .category .category-item a p {
+    font-size: 12px;
+  }
+  .suggested_products {
+    width: 95%;
+    margin: 0 auto;
+    grid-auto-flow: row;
+    margin-bottom: 50px;
+  }
+  .suggested_products .suggested_card {
+    border: none;
+    border-bottom: 1px solid rgb(235, 235, 235);
+  }
+  .best-sellers {
+    width: 95%;
+  }
+  .best-sellers span h2 {
+    margin-right: 20px;
+    font-size: 16px;
+    text-align: right;
+  }
+  .best-sellers .best-sellers-list {
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}/*# sourceMappingURL=style.css.map */
