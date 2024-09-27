@@ -531,6 +531,9 @@ header nav .category ul li:first-child a {
   padding: 5px 10px;
   font-size: 12px;
 }
+.articles .articles-list .article-card:hover {
+  opacity: 80%;
+}
 
 @media screen and (max-width: 1200px) {
   #background-overlay {
