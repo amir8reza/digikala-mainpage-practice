@@ -154,7 +154,34 @@ header nav #category-dropdown {
   box-shadow: rgba(92, 92, 92, 0.16) 0px 1px 4px;
   background-color: white;
   border: 1px solid rgba(134, 134, 134, 0.16);
-  padding: 5px 10px;
+}
+header nav #category-dropdown .categories-list {
+  direction: ltr;
+  width: 200px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #f0f0f1;
+  display: block;
+}
+header nav #category-dropdown .categories-list li {
+  text-align: right;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+}
+header nav #category-dropdown .categories-list li a {
+  color: black;
+  font-size: 12px !important;
+}
+header nav #category-dropdown .categories-list li:before {
+  content: none;
+}
+header nav #category-dropdown .categories-list li:hover {
+  background-color: #fff;
+}
+header nav #category-dropdown .categories-list li:hover a {
+  color: rgb(226, 51, 78);
 }
 header nav .category {
   width: 100%;
@@ -389,7 +416,7 @@ header nav .category ul li:first-child a {
   width: 100px;
 }
 .main-category .category .category-item a p {
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
 }
 .main-category .category .category-item a img {
@@ -541,7 +568,6 @@ footer {
   max-width: 1920px;
   padding: 40px 20px;
   border-top: 1px solid rgb(221, 221, 221);
-  border-bottom: 1px solid rgb(221, 221, 221);
 }
 footer .footer-head .logo {
   width: 200px;
@@ -594,20 +620,20 @@ footer .footer-body .link-group:last-of-type .links .email-form p {
   margin: 20px 0;
 }
 footer .footer-body .link-group:last-of-type .links .email-form input {
+  font-family: "shabnam";
   width: 270px;
   height: 45px;
   border-radius: 10px;
   border: none;
   background-color: rgb(236, 236, 236);
-  font-size: 17px;
+  font-size: 15px;
   padding: 0 10px;
-  font-weight: 700;
 }
 footer .footer-body .link-group:last-of-type .links .email-form button {
+  font-family: "shabnam";
   width: 50px;
   height: 45px;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 15px;
   color: white;
   background-color: rgb(209, 209, 209);
   border: none;
